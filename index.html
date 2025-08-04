@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,94 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Next Level Concrete Coatings</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    header, footer { background: #1e1e1e; color: #fff; padding: 1rem 2rem; text-align: center; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8; line-height: 1.6; }
+    header, footer { background: #222; color: #fff; text-align: center; padding: 1rem; }
     nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    section { padding: 2rem; max-width: 900px; margin: auto; }
+    section { max-width: 960px; margin: auto; padding: 2rem; background: #fff; margin-bottom: 1rem; }
     h1, h2 { color: #333; }
-    form input, form textarea, form select { display: block; width: 100%; padding: 0.5rem; margin-bottom: 1rem; }
-    form label { font-weight: bold; margin-top: 1rem; display: block; }
+    .gallery img { width: 100%; max-width: 300px; margin: 0.5rem; border: 2px solid #ccc; }
+    form input, form textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; }
     .button { background: #333; color: #fff; padding: 0.7rem 1.2rem; border: none; cursor: pointer; }
-    .gallery img { width: 100%; max-width: 300px; margin: 0.5rem; }
-    .services ul { list-style-type: square; padding-left: 1.5rem; }
+    .logo { width: 180px; margin-bottom: 1rem; }
   </style>
 </head>
 <body>
   <header>
+    <img src="images/logo.png" class="logo" alt="Next Level Logo">
     <h1>Next Level Concrete Coatings</h1>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
-      <a href="#estimate">Request Estimate</a>
-      <a href="#reviews">Reviews</a>
+      <a href="#estimate">Estimate</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="home">
-    <h2>Man Cave Approved. Shop-Ready.</h2>
-    <p>Next Level Concrete Coatings offers professional epoxy full flake and grind & seal flooring across Douglas County, Oregon. Durable, clean, and built for your garage, shop, or commercial space. Free estimates available—upload a photo of your concrete today!</p>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Locally owned and operated in Southern Oregon, we bring over 20 years of concrete experience to every floor. We specialize in full flake coatings for garages, shops, and commercial spaces. Our craftsmanship, clean installs, and honest pricing speak for themselves.</p>
-  </section>
-
   <section id="services">
     <h2>Our Services</h2>
-    <div class="services">
-      <ul>
-        <li>Full Flake Epoxy Systems</li>
-        <li>Grind and Seal Concrete Finishes</li>
-        <li>Metallic Epoxy (optional)</li>
-        <li>Garage & Shop Floor Coatings</li>
-        <li>Pressure Wash & Reseal</li>
-        <li>Commercial Epoxy Flooring</li>
-      </ul>
-    </div>
+    <ul>
+      <li>Full Flake Epoxy Floor Systems</li>
+      <li>Metallic Epoxy Installations</li>
+      <li>Grind & Seal Finishes</li>
+      <li>Garage, Shop & Commercial Coatings</li>
+      <li>Pressure Washing & Resealing</li>
+    </ul>
   </section>
 
   <section id="gallery">
-    <h2>Gallery / Projects</h2>
+    <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x200?text=Before+Garage" alt="Before Garage Floor">
-      <img src="https://via.placeholder.com/300x200?text=After+Epoxy" alt="After Garage Floor">
-      <img src="https://via.placeholder.com/300x200?text=Shop+Floor" alt="Shop Floor">
+      <img src="images/metallic-before.jpg" alt="Before Floor">
+      <img src="images/metallic-after.jpg" alt="After Floor">
+      <img src="images/flake-blue.jpg" alt="Blue Flake">
+      <img src="images/flake-tan.jpg" alt="Tan Flake">
+      <img src="images/flake-gray.jpg" alt="Gray Flake">
+      <img src="images/ad-before-after.jpg" alt="Ad Before After">
+      <img src="images/ad-antler.jpg" alt="Ad Antler">
+      <img src="images/ad-porsche.jpg" alt="Ad Porsche">
     </div>
   </section>
 
   <section id="estimate">
-    <h2>Request an Estimate</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" required />
-
-      <label for="address">Job Address:</label>
-      <input type="text" id="address" name="address" required />
-
-      <label for="description">Job Description:</label>
-      <textarea id="description" name="description" rows="4"></textarea>
-
-      <label for="photos">Upload Concrete Photos:</label>
-      <input type="file" id="photos" name="photos" multiple accept="image/*" />
-
-      <button class="button" type="submit">Request Estimate</button>
+    <h2>Request a Free Estimate</h2>
+    <form action="https://formspree.io/f/moqgkzry" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <textarea name="message" placeholder="Tell us about your project..." rows="4"></textarea>
+      <label>Upload up to 3 photos:</label>
+      <input type="file" name="photos" accept="image/*" multiple>
+      <button class="button" type="submit">Send Estimate</button>
     </form>
-  </section>
-
-  <section id="reviews">
-    <h2>Customer Reviews</h2>
-    <p>“Our garage floor looks incredible. Mike was professional and easy to work with. Highly recommend!” – Sarah L.</p>
-    <p>“The grind & seal in our shop came out flawless. 5 stars!” – Dan M.</p>
   </section>
 
   <section id="contact">
