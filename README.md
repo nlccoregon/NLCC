@@ -1,2 +1,0 @@
-# NLCC
-Next Level Site
